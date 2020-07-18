@@ -105,7 +105,7 @@ body {
 
 .contenedor-formulario .formulario .input-group.error label:before {border: 2px solid #D32F2F;}
 
-.contenedor-formulario .formulario input[type="submit"] {
+#btn-calcular{
       background: #f1cb3f;
       border-radius: 1px;
       border: 2px solid #f2f2f2;
@@ -118,7 +118,29 @@ body {
       width: 100%;
       -webkit-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-      .contenedor-formulario .formulario input[type="submit"]:hover {
-        background: #23282e;
+      transition: all 0.3s ease;
+}
+
+#btn-calcular:hover {
+    background: #f3bf00;
+}
+
+#btn-pdf{
+      background: #23282e;
+      border-radius: 1px;
+      border: 2px solid #f2f2f2;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Roboto";
+      font-size: 16px;
+      padding: 15px;
+      width: 100%;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+
+#btn-pdf:hover {
+    background: #081731;
 }
