@@ -5,10 +5,12 @@
     <title>Resultado PDF</title>
 
     <style type="text/css">
-      
+
     </style>
   </head>
   <body>
-    <h1>Hola Mundo</h1>
+    <?php if(isset($_POST['titulo'])): ?>
+      <h1><?=$_POST['titulo']?></h1>
+    <?php endif; ?>
   </body>
 </html>
