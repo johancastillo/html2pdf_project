@@ -1,7 +1,9 @@
 <?php
 
+//Load dependencies
 require __DIR__.'/vendor/autoload.php';
 
+//Namespace of the class
 use Spipu\Html2Pdf\Html2Pdf;
 
 if( isset($_POST['crear'])){
