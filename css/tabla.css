@@ -1,0 +1,27 @@
+/*Tabla de resuktados*/
+#resultado table{
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+.main-container{
+  margin: 150px auto;
+  width: 600px;
+}
+
+#resultado th, td{
+  padding: 10px;
+}
+
+#resultado thead{
+  background-color: #23282e;
+  color: white;
+  border-bottom: solid 5px #000;
+}
+
+#resultado tr:nth.child(even){
+  background-color: #ddd;
+}
