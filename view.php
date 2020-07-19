@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Resultado PDF</title>
     <style>
+      /* Tabla */
       table{
         text-align: center;
         margin: auto;
