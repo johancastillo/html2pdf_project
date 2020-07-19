@@ -131,7 +131,7 @@ if (
                 $totalint = $totalint + ( $deuda * $interes );
 
                 //Intereses
-                echo "<td>".number_format($deuda * $interes,2,",",".")."%</td>";
+                echo "<td>".number_format($deuda * $interes,2,",",".")."</td>";
 
                 //Amortización
                 echo "<td>".number_format($m - ( $deuda * $interes),2,",",".")."$</td>";
