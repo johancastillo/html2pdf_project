@@ -28,6 +28,11 @@
       $anos = $_POST["anos"];
       $interes = $_POST["interes"];
       $totalint = 0;
+      $downpayment = "";
+
+      if(isset($_POST['downpayment'])){
+        $downpayment = floatval($_POST['downpayment']);
+      }
 
       // hacemos los calculos...
       $interes = ($interes/100)/12;
@@ -36,7 +41,7 @@
       //Mostramos los resultados
       echo '<p style="text-align:center">'.'Capital inicial: '.number_format($deuda,2,',','.').'$
       <br>
-      Down Payment: $
+      Down Payment: '.$downpayment.'$
       <br>
       Cuota a pagar mensualmente: '.number_format($m,2,',','.').'$
       </p>';

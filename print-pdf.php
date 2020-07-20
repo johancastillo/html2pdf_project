@@ -17,6 +17,9 @@ if( isset($_POST['crear'])){
   $html2pdf->output("calculos-hipotecarios.pdf");
 }
 
+if( isset($_POST['calcular'])){
+  
+}
 
 ?>
 
@@ -186,7 +189,7 @@ if( isset($_POST['crear'])){
 					    <br>
 
              <div>
-               <p><input type="submit" value="CALCULAR" id="btn-calcular"></p>
+               <p><input type="submit" name="calcular" value="CALCULAR" id="btn-calcular"></p>
              </div>
 
              <div>
