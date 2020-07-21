@@ -57,6 +57,8 @@ if( isset($_POST['calcular'])){
 
           <th>Amortización</th>
 
+          <th>Cuota Mensual</th>
+
           <th>Capital Pendiente</th>
 
       </tr>
@@ -73,11 +75,13 @@ if( isset($_POST['calcular'])){
             $totalint = $totalint + ( $deuda * $interes );
 
             //Intereses
-            echo "<td>".number_format($deuda * $interes,2,",",".")."</td>";
+            echo "<td>".number_format($deuda * $interes,2,",",".")."$</td>";
 
             //Amortización
             echo "<td>".number_format($m - ( $deuda * $interes),2,",",".")."$</td>";
 
+            //Cuot mensual
+            echo "<td>".number_format($m,2,',','.').'$</td>';
 
             //Deuda
             $deuda = $deuda-($m - ( $deuda * $interes));
@@ -146,13 +150,13 @@ if( isset($_POST['calcular'])){
     input[type="text"]{
       font-family: "Roboto";
       font-size: 16px;
-      color: #e05a00;
+      color: #23282e;
       width: 100%;
       outline: none;
       padding: 15px;
       background: none;
       border: none;
-      border-bottom: 2px solid #BBDEFB;
+      border-bottom: 2px solid #F1CB3F;
     }
 
     .input-group label {color: #ffc900; }
@@ -169,7 +173,7 @@ if( isset($_POST['calcular'])){
     .formulario .radio label{
       display: inline-block;
       cursor: pointer;
-      color: #FF4136;
+      color: #D9AB00;
       position: relative;
       padding: 5px 15px 5px 51px;
       font-size: 1em;
@@ -180,7 +184,7 @@ if( isset($_POST['calcular'])){
     }
 
       .formulario .radio label:hover{
-        background: rgba(255, 65, 54, 0.1);
+        background: rgba(35, 40, 46, 0.26);
       }
 
       .formulario .radio label:before {
@@ -192,7 +196,7 @@ if( isset($_POST['calcular'])){
         left: 15px;
         border-radius: 50%;
         background: none;
-        border: 3px solid #FF4136;
+        border: 3px solid #D9AB00;
       }
 
     .formulario input[type="radio"] {display: none;}
@@ -201,7 +205,7 @@ if( isset($_POST['calcular'])){
 
     .formulario input[type="radio"]:checked + label {
       padding: 5px 15px;
-      background: #F1CB3F;
+      background: #23282E;
       border-radius: 2px;
       color: #fff;
     }
@@ -260,7 +264,7 @@ if( isset($_POST['calcular'])){
               <p style="color: #000;">¿Cuanto cuesta la casa que quieres?</p>
               <br>
               <div class="input-group">
-                <span><input type="text" placeholder="Crédito" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" /></span>
+                <span><input type="text" placeholder="Crédito($)" value="10" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" /></span>
               </div>
 
               <p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
