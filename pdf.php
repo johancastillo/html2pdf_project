@@ -64,6 +64,8 @@
 
             <th>Amortización</th>
 
+            <th>Cuota Mensual</th>
+
             <th>Capital Pendiente</th>
 
         </tr>
@@ -82,11 +84,13 @@
                   $totalint = $totalint + ( $deuda * $interes );
 
                   //Intereses
-                  echo "<td>".number_format($deuda * $interes,2,",",".")."</td>";
+                  echo "<td>".number_format($deuda * $interes,2,",",".")."$</td>";
 
                   //Amortización
                   echo "<td>".number_format($m - ( $deuda * $interes),2,",",".")."$</td>";
 
+                  //Cuot mensual
+                  echo "<td>".number_format($m,2,',','.').'$</td>';
 
                   //Deuda
                   $deuda = $deuda-($m - ( $deuda * $interes));
