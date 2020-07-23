@@ -264,7 +264,7 @@ if( isset($_POST['calcular'])){
               <p style="color: #000;">¿Cuanto cuesta la casa que quieres?</p>
               <br>
               <div class="input-group">
-                <span><input type="text" placeholder="Crédito($)" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" /></span>
+                <span><input type="text" placeholder="$" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" /></span>
               </div>
 
               <p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
