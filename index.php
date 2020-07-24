@@ -269,9 +269,16 @@ if( isset($_POST['calcular'])){
 
               <p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
     					<br>
-    					<div class="input-group">
-    						<span><input type="text" name="anos" maxlength=2 placeholder="Años de hipoteca" value="<?php echo $_POST["anos"]?>"></span>
-    					</div>
+              <div class="radio">
+							    <input type="radio" name="anos" id="anos15" value="15" checked>
+							    <label for="anos15">15</label>
+
+							    <input type="radio" name="anos" id="anos20" value="20">
+							    <label for="anos20">20</label>
+
+							    <input type="radio" name="anos" id="anos30" value="30">
+							    <label for="anos30">30</label>
+					    </div>
 
               <p style="color: #000;">Tasa de intereses</p>
     					<br>
