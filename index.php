@@ -271,13 +271,13 @@ if( isset($_POST['calcular'])){
     					<br>
               <div class="radio">
 							    <input type="radio" name="anos" id="anos15" value="15" checked>
-							    <label for="anos15">15</label>
+							    <label for="anos15">15 años</label>
 
 							    <input type="radio" name="anos" id="anos20" value="20">
-							    <label for="anos20">20</label>
+							    <label for="anos20">20 años</label>
 
 							    <input type="radio" name="anos" id="anos30" value="30">
-							    <label for="anos30">30</label>
+							    <label for="anos30">30 años</label>
 					    </div>
 
               <p style="color: #000;">Tasa de intereses</p>
