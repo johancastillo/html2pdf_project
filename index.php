@@ -249,12 +249,19 @@ if( isset($_POST['calcular'])){
     #btn-pdf:hover {
         background: #081731;
     }
-
     </style>
+
+    <link rel="stylesheet" href="css/toup.css">
+
+    <!-- Button to up -->
+    <script src="https://kit.fontawesome.com/5da0232ac8.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/toup.js"></script>
 </head>
 
 <!-- Form -->
 <body>
+  <span class="ir-arriba fas fa-sort-up"></span>
 <div class="contenedor-formulario">
   		<div class="wrap">
           <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" class="formulario" style="width: 100%;margin: auto;"
