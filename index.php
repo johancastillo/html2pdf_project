@@ -136,13 +136,13 @@ if( isset($_POST['calcular'])){
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <h5 class="text-white h4"><a href="#">Collapsed content</a></h5>
-      <span class="text-white"><a href="">Inicio</a></span><br>
-      <span class="text-white"><a href="#">Tu Casa Propia</a></span><br>
-      <span class="text-white"><a href="#">Encuentra Tu Hogar</a></span><br>
-      <span class="text-white"><a href="#">Blog</a></span><br>
-      <span class="text-white"><a href="#">Ser Pre-aprobado</a></span><br>
-      <span class="text-white"><a href="#">Quiero Contactar un Agente</a></span><br>
-      <span class="text-white"><a href="#">Calculadora Hipotecaria</a></span>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/">Inicio</a></span><br>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/tucasapropia/">Tu Casa Propia</a></span><br>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/category/inmuebles/">Encuentra Tu Hogar</a></span><br>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/category/blog/">Blog</a></span><br>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/ser-pre-aprobado/">Ser Pre-aprobado</a></span><br>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/contactar-agente/">Quiero Contactar un Agente</a></span><br>
+      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/calculadora-hipotecaria/">Calculadora Hipotecaria</a></span>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
