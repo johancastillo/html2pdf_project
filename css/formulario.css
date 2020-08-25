@@ -18,6 +18,10 @@ body{
   margin-bottom: 32px !important;
 }
 
+.input-group span{
+  width: 100%;
+}
+
 input[type="text"]{
   font-size: 16px !important;
   color: #23282e !important;
@@ -83,7 +87,7 @@ input[type="text"]{
       background: #f1cb3f;
       border-radius: 1px;
       border: 2px solid #f2f2f2;
-      color: #fff;
+      color: #081731;
       cursor: pointer;
       display: inline-block;
       font-family: "Roboto";

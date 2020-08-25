@@ -115,9 +115,9 @@ if( isset($_POST['calcular'])){
     <title>Calculadora Hipotecaria</title>
 
     <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="css/formulario.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
 
     <!-- Iconos de Font Awesome -->
@@ -135,8 +135,14 @@ if( isset($_POST['calcular'])){
   <div class="fixed-top">
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
+      <h5 class="text-white h4"><a href="#">Collapsed content</a></h5>
+      <span class="text-white"><a href="">Inicio</a></span><br>
+      <span class="text-white"><a href="#">Tu Casa Propia</a></span><br>
+      <span class="text-white"><a href="#">Encuentra Tu Hogar</a></span><br>
+      <span class="text-white"><a href="#">Blog</a></span><br>
+      <span class="text-white"><a href="#">Ser Pre-aprobado</a></span><br>
+      <span class="text-white"><a href="#">Quiero Contactar un Agente</a></span><br>
+      <span class="text-white"><a href="#">Calculadora Hipotecaria</a></span>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
