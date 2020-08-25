@@ -1,0 +1,120 @@
+/* Formulario */
+body{
+  background:#f2f2f2;
+  font-family:"Roboto";
+  /*border-top: 30px solid #23282e;*/
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.contenedor-formulario{
+  width: 100% !important;
+  padding: 50px 0;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 32px !important;
+}
+
+input[type="text"]{
+  font-size: 16px;
+  color: #23282e;
+  width: 100% !important;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #F1CB3F;
+}
+
+.input-group label {color: #ffc900; }
+
+.wrap {
+  width: 90% !important;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0px 0px 3px grey;
+}
+
+.formulario .radio label{
+  display: inline-block;
+  cursor: pointer;
+  color: #D9AB00;
+  position: relative;
+  padding: 5px 15px 5px 51px;
+  font-size: 1em;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+  .formulario .radio label:hover{
+    background: rgba(35, 40, 46, 0.26);
+  }
+
+  .formulario .radio label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 3px solid #D9AB00;
+  }
+
+.formulario input[type="radio"] {display: none;}
+
+.formulario input[type="radio"]:checked + label:before {display: none;}
+
+.formulario input[type="radio"]:checked + label {
+  padding: 5px 15px;
+  background: #23282E;
+  border-radius: 2px;
+  color: #fff;
+}
+
+#btn-calcular{
+      background: #f1cb3f;
+      border-radius: 1px;
+      border: 2px solid #f2f2f2;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Roboto";
+      font-size: 16px;
+      padding: 15px;
+      width: 100%;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+
+#btn-calcular:hover {
+    background: #f3bf00;
+}
+
+#btn-pdf{
+      background: #23282e;
+      border-radius: 1px;
+      border: 2px solid #f2f2f2;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Roboto";
+      font-size: 16px;
+      padding: 15px;
+      width: 100%;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+
+#btn-pdf:hover {
+    background: #081731;
+}

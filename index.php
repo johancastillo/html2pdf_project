@@ -114,154 +114,59 @@ if( isset($_POST['calcular'])){
 <head>
     <title>Calculadora Hipotecaria</title>
 
-    <style type="text/css">
-    /* Tabla */
-    table{
-      text-align: center;
-      margin: auto;
-      width: 90%;
-      background-color: white;
-      border-collapse: collapse;
-    }
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/tabla.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
-    thead{
-      background-color: #23282e;
-      color: white;
-      border-bottom: solid 5px #000;
-    }
-
-    th, td{
-      padding: 10px;
-    }
-
-    /* Formulario */
-    body{
-      background:#f2f2f2; font-family:"Roboto"; border-top: 30px solid #23282e; margin: 0;
-    }
-
-    .contenedor-formulario{
-      width: 100%; padding: 50px 0;
-    }
-
-    .input-group {
-      position: relative; margin-bottom: 32px;
-    }
-
-    input[type="text"]{
-      font-family: "Roboto";
-      font-size: 16px;
-      color: #23282e;
-      width: 100%;
-      outline: none;
-      padding: 15px;
-      background: none;
-      border: none;
-      border-bottom: 2px solid #F1CB3F;
-    }
-
-    .input-group label {color: #ffc900; }
-
-    .wrap {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px;
-      background: #fff;
-      box-shadow: 0px 0px 3px grey;
-    }
-
-    .formulario .radio label{
-      display: inline-block;
-      cursor: pointer;
-      color: #D9AB00;
-      position: relative;
-      padding: 5px 15px 5px 51px;
-      font-size: 1em;
-      border-radius: 5px;
-      -webkit-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-
-      .formulario .radio label:hover{
-        background: rgba(35, 40, 46, 0.26);
-      }
-
-      .formulario .radio label:before {
-        content: "";
-        display: inline-block;
-        width: 17px;
-        height: 17px;
-        position: absolute;
-        left: 15px;
-        border-radius: 50%;
-        background: none;
-        border: 3px solid #D9AB00;
-      }
-
-    .formulario input[type="radio"] {display: none;}
-
-    .formulario input[type="radio"]:checked + label:before {display: none;}
-
-    .formulario input[type="radio"]:checked + label {
-      padding: 5px 15px;
-      background: #23282E;
-      border-radius: 2px;
-      color: #fff;
-    }
-
-    #btn-calcular{
-          background: #f1cb3f;
-          border-radius: 1px;
-          border: 2px solid #f2f2f2;
-          color: #fff;
-          cursor: pointer;
-          display: inline-block;
-          font-family: "Roboto";
-          font-size: 16px;
-          padding: 15px;
-          width: 100%;
-          -webkit-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-    }
-
-    #btn-calcular:hover {
-        background: #f3bf00;
-    }
-
-    #btn-pdf{
-          background: #23282e;
-          border-radius: 1px;
-          border: 2px solid #f2f2f2;
-          color: #fff;
-          cursor: pointer;
-          display: inline-block;
-          font-family: "Roboto";
-          font-size: 16px;
-          padding: 15px;
-          width: 100%;
-          -webkit-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-    }
-
-    #btn-pdf:hover {
-        background: #081731;
-    }
-    </style>
-
-    <link rel="stylesheet" href="css/toup.css">
+    <!-- Iconos de Font Awesome -->
+    <script src="https://kit.fontawesome.com/5da0232ac8.js" crossorigin="anonymous"></script>
 
     <!-- Button to up -->
-    <script src="https://kit.fontawesome.com/5da0232ac8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/toup.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/toup.js"></script>
 </head>
 
-<!-- Form -->
+
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Botón de ir arriba -->
   <span class="ir-arriba fas fa-sort-up"></span>
+
+  <!-- Formulario -->
 <div class="contenedor-formulario">
   		<div class="wrap">
           <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" class="formulario" style="width: 100%;margin: auto;"
