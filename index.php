@@ -118,6 +118,7 @@ if( isset($_POST['calcular'])){
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
     <!-- Iconos de Font Awesome -->
     <script src="https://kit.fontawesome.com/5da0232ac8.js" crossorigin="anonymous"></script>
@@ -131,37 +132,19 @@ if( isset($_POST['calcular'])){
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="fixed-top">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
   </nav>
+</div>
 
   <!-- Botón de ir arriba -->
   <span class="ir-arriba fas fa-sort-up"></span>
@@ -176,7 +159,9 @@ if( isset($_POST['calcular'])){
               <p style="color: #000;">¿Cuanto cuesta la casa que quieres?</p>
               <br>
               <div class="input-group">
-                <span><input type="text" placeholder="$" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" /></span>
+                <span>
+                  <input type="text" placeholder="$" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" />
+                </span>
               </div>
 
               <p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
@@ -221,7 +206,9 @@ if( isset($_POST['calcular'])){
              <div>
                <p><input type="submit" name="crear" value="GENERAR PDF" id="btn-pdf"></p>
              </div>
-</form>
-</div>
-</div>
+      </form>
+      </div>
+      </div>
+
+      <script src="js/bootstrap.js"></script>
 </body>

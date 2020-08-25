@@ -8,18 +8,19 @@ body{
 }
 
 .contenedor-formulario{
+  margin-top: 30px;
   width: 100% !important;
-  padding: 50px 0;
+  padding: 50px 0 !important;
 }
 
 .input-group {
-  position: relative;
+  position: relative !important;
   margin-bottom: 32px !important;
 }
 
 input[type="text"]{
-  font-size: 16px;
-  color: #23282e;
+  font-size: 16px !important;
+  color: #23282e !important;
   width: 100% !important;
   outline: none;
   padding: 15px;
@@ -32,7 +33,6 @@ input[type="text"]{
 
 .wrap {
   width: 90% !important;
-  max-width: 1000px;
   margin: auto;
   padding: 40px;
   background: #fff;
