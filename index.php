@@ -136,8 +136,8 @@ if( isset($_POST['calcular'])){
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <a class="navbar-brand" href="#">
-        <img src="img/logo-casa.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-          Tu Casa Propia en Atlanta
+        <img src="img/logo-casa.png" width="90" height="64" class="d-inline-block align-top" alt="" loading="lazy">
+          
       </a>
       <br>
       <span><a href="http://tucasapropiaenatlanta.com/">Inicio</a></span><br>
