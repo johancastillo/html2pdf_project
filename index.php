@@ -132,12 +132,16 @@ if( isset($_POST['calcular'])){
 
 <body>
   <!-- Navbar -->
-  <div class="fixed-top">
+  <div class="fixed-top navegacion">
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <h5 class="text-white h4"><a href="#">Collapsed content</a></h5>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/">Inicio</a></span><br>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/tucasapropia/">Tu Casa Propia</a></span><br>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo-casa.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          Tu Casa Propia en Atlanta
+      </a>
+      <br>
+      <span><a href="http://tucasapropiaenatlanta.com/">Inicio</a></span><br>
+      <span><a href="http://tucasapropiaenatlanta.com/tucasapropia/">Tu Casa Propia</a></span><br>
       <span class="text-white"><a href="http://tucasapropiaenatlanta.com/category/inmuebles/">Encuentra Tu Hogar</a></span><br>
       <span class="text-white"><a href="http://tucasapropiaenatlanta.com/category/blog/">Blog</a></span><br>
       <span class="text-white"><a href="http://tucasapropiaenatlanta.com/ser-pre-aprobado/">Ser Pre-aprobado</a></span><br>

@@ -1,3 +1,7 @@
 body > p{
   margin-top: 50px;
 }
+
+.navegacion a{
+  color: #fff !important;
+}
