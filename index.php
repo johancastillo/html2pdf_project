@@ -137,7 +137,7 @@ if( isset($_POST['calcular'])){
     <div class="bg-dark p-4">
       <a class="navbar-brand" href="#">
         <img src="img/logo-casa.png" width="90" height="64" class="d-inline-block align-top" alt="" loading="lazy">
-          
+
       </a>
       <br>
       <span><a href="http://tucasapropiaenatlanta.com/">Inicio</a></span><br>
@@ -156,69 +156,81 @@ if( isset($_POST['calcular'])){
   </nav>
 </div>
 
+  <div class="container-fluid mt-4">
+    <div class="row">
+
+        <div class="col-md-6">
+          <img src="img/logo-casa.png" alt="">
+        </div>
+
+        <div class="col-md-6">
+          <!-- Formulario -->
+        <div class="contenedor-formulario">
+          		<div class="wrap">
+                  <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" class="formulario" style="width: 100%;margin: auto;"
+                    name="formulario_registro">
+
+                    <div>
+                      <p style="color: #000;">¿Cuanto cuesta la casa que quieres?</p>
+                      <br>
+                      <div class="input-group">
+                        <span>
+                          <input type="text" placeholder="$" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" />
+                        </span>
+                      </div>
+
+                      <p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
+            					<br>
+                      <div class="radio">
+        							    <input type="radio" name="anos" id="anos15" value="15" checked>
+        							    <label for="anos15">15 años</label>
+
+        							    <input type="radio" name="anos" id="anos20" value="20">
+        							    <label for="anos20">20 años</label>
+
+        							    <input type="radio" name="anos" id="anos30" value="30">
+        							    <label for="anos30">30 años</label>
+        					    </div>
+
+                      <p style="color: #000;">Tasa de intereses</p>
+            					<br>
+            					<div class="input-group">
+            						  <span><input type="text" name="interes" placeholder="Tasa de interés(%)" maxlength=9 value="<?php echo $_POST["interes"]?>"></span>
+            					</div>
+
+                      <p style="color: #000;">Down Payment</p>
+        					    <br>
+
+        					    <div class="radio">
+        							    <input type="radio" name="downpayment" id="hombre" value="3.5" checked>
+        							    <label for="hombre">3,5%</label>
+
+        							    <input type="radio" name="downpayment" id="mujer" value="5">
+        							    <label for="mujer">5%</label>
+
+        							    <input type="radio" name="downpayment" id="alien" value="10">
+        							    <label for="alien">10%</label>
+        					    </div>
+
+        					    <br>
+
+                     <div>
+                       <p><input type="submit" name="calcular" value="CALCULAR" id="btn-calcular"></p>
+                     </div>
+
+                     <div>
+                       <p><input type="submit" name="crear" value="GENERAR PDF" id="btn-pdf"></p>
+                     </div>
+              </form>
+              </div>
+              </div>
+        </div>
+
+    </div>
+  </div>
+
   <!-- Botón de ir arriba -->
   <span class="ir-arriba fas fa-sort-up"></span>
-
-  <!-- Formulario -->
-<div class="contenedor-formulario">
-  		<div class="wrap">
-          <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST" class="formulario" style="width: 100%;margin: auto;"
-            name="formulario_registro">
-
-            <div>
-              <p style="color: #000;">¿Cuanto cuesta la casa que quieres?</p>
-              <br>
-              <div class="input-group">
-                <span>
-                  <input type="text" placeholder="$" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" />
-                </span>
-              </div>
-
-              <p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
-    					<br>
-              <div class="radio">
-							    <input type="radio" name="anos" id="anos15" value="15" checked>
-							    <label for="anos15">15 años</label>
-
-							    <input type="radio" name="anos" id="anos20" value="20">
-							    <label for="anos20">20 años</label>
-
-							    <input type="radio" name="anos" id="anos30" value="30">
-							    <label for="anos30">30 años</label>
-					    </div>
-
-              <p style="color: #000;">Tasa de intereses</p>
-    					<br>
-    					<div class="input-group">
-    						  <span><input type="text" name="interes" placeholder="Tasa de interés(%)" maxlength=9 value="<?php echo $_POST["interes"]?>"></span>
-    					</div>
-
-              <p style="color: #000;">Down Payment</p>
-					    <br>
-
-					    <div class="radio">
-							    <input type="radio" name="downpayment" id="hombre" value="3.5" checked>
-							    <label for="hombre">3,5%</label>
-
-							    <input type="radio" name="downpayment" id="mujer" value="5">
-							    <label for="mujer">5%</label>
-
-							    <input type="radio" name="downpayment" id="alien" value="10">
-							    <label for="alien">10%</label>
-					    </div>
-
-					    <br>
-
-             <div>
-               <p><input type="submit" name="calcular" value="CALCULAR" id="btn-calcular"></p>
-             </div>
-
-             <div>
-               <p><input type="submit" name="crear" value="GENERAR PDF" id="btn-pdf"></p>
-             </div>
-      </form>
-      </div>
-      </div>
 
       <script src="js/bootstrap.js"></script>
 </body>
