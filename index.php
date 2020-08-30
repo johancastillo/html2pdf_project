@@ -164,7 +164,9 @@ if( isset($_POST['calcular'])){
     <div class="row justify-content-center">
 
         <div class="col-lg-6 mt-4">
-          <img src="img/banner.png" alt="" style="width: 460px;height: 740px;">
+          <div class="center-block">
+            <img src="img/banner.png" alt="" style="width: 100%;height: 740px;">
+          </div>
         </div>
 
         <div class="col-lg-6">
