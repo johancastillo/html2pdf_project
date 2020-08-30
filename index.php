@@ -156,14 +156,16 @@ if( isset($_POST['calcular'])){
   </nav>
 </div>
 
-  <div class="container-fluid mt-4">
-    <div class="row">
+<br>
 
-        <div class="col-md-6">
-          <img src="img/logo-casa.png" alt="">
+  <div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6 mt-4">
+          <img src="img/banner.png" alt="" style="width: 460px;height: 740px;">
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <!-- Formulario -->
         <div class="contenedor-formulario">
           		<div class="wrap">
