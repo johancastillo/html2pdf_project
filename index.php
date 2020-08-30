@@ -181,7 +181,8 @@ if( isset($_POST['calcular'])){
                       <br>
                       <div class="input-group">
                         <span>
-                          <input type="text" placeholder="$" name="credito" maxlen(%)gth=9 placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" />
+                          <input type="text" id="credito" placeholder="$" name="credito" maxlen(%)gth=9
+                          placeholder="Ingresa la cantidad" value="<?php echo $_POST["credito"]?>" />
                         </span>
                       </div>
 
@@ -201,7 +202,10 @@ if( isset($_POST['calcular'])){
                       <p style="color: #000;">Tasa de intereses</p>
             					<br>
             					<div class="input-group">
-            						  <span><input type="text" name="interes" placeholder="Tasa de interés(%)" maxlength=9 value="<?php echo $_POST["interes"]?>"></span>
+            						  <span>
+                            <input type="text" id="intereses" name="interes" placeholder="Tasa de interés(%)" 
+                            maxlength=9 value="<?php echo $_POST["interes"]?>">
+                          </span>
             					</div>
 
                       <p style="color: #000;">Down Payment</p>
@@ -250,4 +254,5 @@ if( isset($_POST['calcular'])){
 <!-- Footer -->
 
       <script src="js/bootstrap.js"></script>
+      <script src="js/validations.js"></script>
 </body>
