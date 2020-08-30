@@ -5,3 +5,8 @@ body > p{
 .navegacion a{
   color: #fff !important;
 }
+
+.bg-official{
+  background: #f1cb3f !important;
+  color: #000 !important;
+}

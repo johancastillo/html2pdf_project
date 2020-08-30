@@ -238,10 +238,10 @@ if( isset($_POST['calcular'])){
 <span class="ir-arriba fas fa-sort-up"></span>
 
   <!-- Footer -->
-<footer class="page-footer font-small blue bg-dark">
+<footer class="page-footer font-small bg-official">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center text-white py-3">© 2020 Copyright</div>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
   <!-- Copyright -->
 
 </footer>
