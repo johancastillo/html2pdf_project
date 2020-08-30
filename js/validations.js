@@ -31,6 +31,8 @@ btnCalcular.addEventListener('click', () => {
     alert('El campo "credito" está vacío')
   }else if(intereses == 0){
     alert('El campo "intereses" está vacío')
+  }else{
+    alert("Los calculos se hicieron de forma correcta")
   }
 
 })
