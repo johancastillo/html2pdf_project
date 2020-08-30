@@ -131,6 +131,8 @@ if( isset($_POST['calcular'])){
 
 
 <body>
+
+
   <!-- Navbar -->
   <div class="fixed-top navegacion">
   <div class="collapse" id="navbarToggleExternalContent">
@@ -230,9 +232,20 @@ if( isset($_POST['calcular'])){
 
     </div>
   </div>
+</div>
 
-  <!-- Botón de ir arriba -->
-  <span class="ir-arriba fas fa-sort-up"></span>
+<!-- Botón de ir arriba -->
+<span class="ir-arriba fas fa-sort-up"></span>
+
+  <!-- Footer -->
+<footer class="page-footer font-small blue bg-dark">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-white py-3">© 2020 Copyright</div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
       <script src="js/bootstrap.js"></script>
 </body>
