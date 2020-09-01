@@ -10,3 +10,7 @@ body > p{
   background: #f1cb3f !important;
   color: #000 !important;
 }
+
+.text a{
+  color: #fff !important;
+}

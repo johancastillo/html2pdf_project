@@ -26,13 +26,34 @@ inputIntereses.addEventListener('keyup', () => {
 
 btnCalcular.addEventListener('click', () => {
   if(credito == 0 && intereses == 0){
-    alert('Los campos "credito" e "intereses" están vacíos')
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Hay campos vacíos en el formulario',
+      footer: '<a href>Why do I have this issue?</a>'
+    })
   }else if(credito == 0){
-    alert('El campo "credito" está vacío')
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href>Why do I have this issue?</a>'
+    })
   }else if(intereses == 0){
-    alert('El campo "intereses" está vacío')
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href>Why do I have this issue?</a>'
+    })
   }else{
-    alert("Los calculos se hicieron de forma correcta")
+    Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Los calculos se han realizado correctamente',
+  showConfirmButton: false,
+  timer: 1500
+})
   }
 
 })

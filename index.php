@@ -134,38 +134,50 @@ if( isset($_POST['calcular'])){
 
 
   <!-- Navbar -->
-  <div class="fixed-top navegacion">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo-casa.png" width="90" height="64" class="d-inline-block align-top" alt="" loading="lazy">
+ <nav class="navbar navbar-expand-lg bg-dark text-white">
+   <a class="navbar-brand" href="#">
+    <img src="img/logo-casa.png" width="65" height="65" alt="" loading="lazy">
+   </a>
 
-      </a>
-      <br>
-      <span><a href="http://tucasapropiaenatlanta.com/">Inicio</a></span><br>
-      <span><a href="http://tucasapropiaenatlanta.com/tucasapropia/">Tu Casa Propia</a></span><br>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/category/inmuebles/">Encuentra Tu Hogar</a></span><br>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/category/blog/">Blog</a></span><br>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/ser-pre-aprobado/">Ser Pre-aprobado</a></span><br>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/contactar-agente/">Quiero Contactar un Agente</a></span><br>
-      <span class="text-white"><a href="http://tucasapropiaenatlanta.com/calculadora-hipotecaria/">Calculadora Hipotecaria</a></span>
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon fas fa-bars text-white"></span>
+   </button>
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto text">
+       <li class="nav-item active">
+         <a class="nav-link" href="http://tucasapropiaenatlanta.com/">Inicio</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="http://tucasapropiaenatlanta.com/tucasapropia/">Tu Casa Propia</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="http://tucasapropiaenatlanta.com/category/inmuebles/">Encuentra Tu Hogar</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="http://tucasapropiaenatlanta.com/category/blog/">Blog</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="http://tucasapropiaenatlanta.com/ser-pre-aprobado/">Ser Pre-aprobado</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="http://tucasapropiaenatlanta.com/contactar-agente/">Quiero Contactar un Agente</a>
+       </li>
+       <li class="nav-item">
+
+       </li>
+     </ul>
+   </div>
+ </nav>
 
 <br>
 
-  <div class="container-fluid mt-4">
+  <div class="container-fluid mt-2">
     <div class="row justify-content-center">
 
         <div class="col-lg-6 mt-4">
           <div class="center-block">
-            <img src="img/banner.png" alt="" style="width: 100%;height: 740px;">
+            <img src="img/banner.png" alt="" style="width: 100%;">
           </div>
         </div>
 
@@ -203,7 +215,7 @@ if( isset($_POST['calcular'])){
             					<br>
             					<div class="input-group">
             						  <span>
-                            <input type="text" id="intereses" name="interes" placeholder="Tasa de interés(%)" 
+                            <input type="text" id="intereses" name="interes" placeholder="Tasa de interés(%)"
                             maxlength=9 value="<?php echo $_POST["interes"]?>">
                           </span>
             					</div>
@@ -254,5 +266,6 @@ if( isset($_POST['calcular'])){
 <!-- Footer -->
 
       <script src="js/bootstrap.js"></script>
+      <script src="js/sweetalert2@9.js"></script>
       <script src="js/validations.js"></script>
 </body>
