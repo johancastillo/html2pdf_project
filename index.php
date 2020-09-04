@@ -1,116 +1,3 @@
-<?php
-
-//Load dependencies
-require __DIR__.'/vendor/autoload.php';
-
-//Namespace of the class
-use Spipu\Html2Pdf\Html2Pdf;
-
-if( isset($_POST['crear'])){
-  //Import file "view.php"
-  ob_start();
-  require_once 'pdf.php';
-  $html = ob_get_clean();
-
-  $html2pdf = new Html2Pdf('P','','es','true','UTF-8');
-  $html2pdf->writeHTML($html);
-  $html2pdf->output("calculos-hipotecarios.pdf");
-}
-
-if( isset($_POST['calcular'])){
-  //Variables
-  $deuda = $_POST['credito'];
-  $anos = $_POST["anos"];
-  $interes = $_POST["interes"];
-  $totalint = 0;
-  $downpayment = "";
-
-  if(isset($_POST['downpayment'])){
-    $downpayment = floatval($_POST['downpayment']);
-    $downpayment = $downpayment * $deuda / 100;
-    $deuda = $deuda - $downpayment;
-    $capitalInicial = $deuda + $downpayment;
-  }
-
-
-  // hacemos los calculos...
-  $interes = ($interes/100)/12;
-  $m = ($deuda * $interes * (pow((1+$interes),($anos*12))))/((pow((1+$interes),($anos*12)))-1);
-
-  //Mostramos los resultados
-  echo '<br><p style="text-align:center">'.'Capital inicial: '.number_format($capitalInicial,2,',','.').'$
-  <br>
-  Down Payment: '.number_format($downpayment,2,',','.').'$
-  <br>
-  Cuota a pagar mensualmente: '.number_format($m,2,',','.').'$
-  </p>';
-
-  //Tabla
-  echo '<div id="resultado">
-  <table border="1" cellpadding="5" cellspacing="0">
-    <thead>
-      <tr>
-
-          <th>Mes</th>
-
-          <th>Intereses</th>
-
-          <th>Amortización</th>
-
-          <th>Cuota Mensual</th>
-
-          <th>Capital Pendiente</th>
-
-      </tr>
-    </thead>';
-
-    // mostramos todos los meses...
-
-    for ($i = 1; $i <= $anos * 12 ; $i++) {
-
-        echo "<tr>";
-
-            echo "<td>".$i."</td>";
-
-            $totalint = $totalint + ( $deuda * $interes );
-
-            //Intereses
-            echo "<td>".number_format($deuda * $interes,2,",",".")."$</td>";
-
-            //Amortización
-            echo "<td>".number_format($m - ( $deuda * $interes),2,",",".")."$</td>";
-
-            //Cuot mensual
-            echo "<td>".number_format($m,2,',','.').'$</td>';
-
-            //Deuda
-            $deuda = $deuda-($m - ( $deuda * $interes));
-
-            if ($deuda<0) {
-
-                echo "<td>0$</td>";
-
-            } else {
-
-                echo "<td>".number_format($deuda,2,",",".")."$</td>";
-
-            }
-
-        echo "</tr>";
-
-    }
-
-    echo '</table>
-</div>
-
-<br>
-<p style="text-align:center">Pago total de intereses: '.number_format($totalint,2,",",".").'$</p>';
-
-}
-
-?>
-
-
 <head>
     <title>Calculadora Hipotecaria</title>
 
@@ -169,6 +56,119 @@ if( isset($_POST['calcular'])){
      </ul>
    </div>
  </nav>
+
+ <?php
+
+ //Load dependencies
+ require __DIR__.'/vendor/autoload.php';
+
+ //Namespace of the class
+ use Spipu\Html2Pdf\Html2Pdf;
+
+ if( isset($_POST['crear'])){
+   //Import file "view.php"
+   ob_start();
+   require_once 'pdf.php';
+   $html = ob_get_clean();
+
+   $html2pdf = new Html2Pdf('P','','es','true','UTF-8');
+   $html2pdf->writeHTML($html);
+   $html2pdf->output("calculos-hipotecarios.pdf");
+ }
+
+ if( isset($_POST['calcular'])){
+   //Variables
+   $deuda = $_POST['credito'];
+   $anos = $_POST["anos"];
+   $interes = $_POST["interes"];
+   $totalint = 0;
+   $downpayment = "";
+
+   if(isset($_POST['downpayment'])){
+     $downpayment = floatval($_POST['downpayment']);
+     $downpayment = $downpayment * $deuda / 100;
+     $deuda = $deuda - $downpayment;
+     $capitalInicial = $deuda + $downpayment;
+   }
+
+
+   // hacemos los calculos...
+   $interes = ($interes/100)/12;
+   $m = ($deuda * $interes * (pow((1+$interes),($anos*12))))/((pow((1+$interes),($anos*12)))-1);
+
+   //Mostramos los resultados
+   echo '<br><p style="text-align:center">'.'Capital inicial: '.number_format($capitalInicial,2,',','.').'$
+   <br>
+   Down Payment: '.number_format($downpayment,2,',','.').'$
+   <br>
+   Cuota a pagar mensualmente: '.number_format($m,2,',','.').'$
+   </p>';
+
+   //Tabla
+   echo '<div id="resultado">
+   <table border="1" cellpadding="5" cellspacing="0">
+     <thead>
+       <tr>
+
+           <th>Mes</th>
+
+           <th>Intereses</th>
+
+           <th>Amortización</th>
+
+           <th>Cuota Mensual</th>
+
+           <th>Capital Pendiente</th>
+
+       </tr>
+     </thead>';
+
+     // mostramos todos los meses...
+
+     for ($i = 1; $i <= $anos * 12 ; $i++) {
+
+         echo "<tr>";
+
+             echo "<td>".$i."</td>";
+
+             $totalint = $totalint + ( $deuda * $interes );
+
+             //Intereses
+             echo "<td>".number_format($deuda * $interes,2,",",".")."$</td>";
+
+             //Amortización
+             echo "<td>".number_format($m - ( $deuda * $interes),2,",",".")."$</td>";
+
+             //Cuot mensual
+             echo "<td>".number_format($m,2,',','.').'$</td>';
+
+             //Deuda
+             $deuda = $deuda-($m - ( $deuda * $interes));
+
+             if ($deuda<0) {
+
+                 echo "<td>0$</td>";
+
+             } else {
+
+                 echo "<td>".number_format($deuda,2,",",".")."$</td>";
+
+             }
+
+         echo "</tr>";
+
+     }
+
+     echo '</table>
+ </div>
+
+ <br>
+ <p style="text-align:center">Pago total de intereses: '.number_format($totalint,2,",",".").'$</p>';
+
+ }
+
+ ?>
+
 
 <br>
 
